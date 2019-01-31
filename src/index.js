@@ -1,10 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import data from './data'
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App data={data} />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 if (module.hot) {
     module.hot.accept();

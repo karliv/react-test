@@ -1,10 +1,7 @@
 import React from 'react'
 import Button from './Button'
-import isSearched from '../function/isSearched'
 
-//const isSearched = (searchTerm) => (item) => item.title.toLowerCase().includes(searchTerm.toLowerCase());
-
-const UserList = ({list, pattern, onDismiss}) => {
+const UserList = ({list, onDismiss}) => {
     const largeColumn = {
         width: '40%',
     };
@@ -17,7 +14,7 @@ const UserList = ({list, pattern, onDismiss}) => {
 
     return(
         <div className="table">
-            {list.filter(isSearched(pattern)).map((item) =>
+            {list.map((item) =>
                 <div key={item.objectID} className="table-row">
                     <span style={largeColumn}>
                         <a href={item.url}>{item.title}</a>
